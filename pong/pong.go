@@ -23,8 +23,8 @@ func run() {
 		panic(err)
 	}
 
-	rightPaddle := newPaddle(win.Bounds().Center(), "right")
-	leftPaddle := newPaddle(win.Bounds().Center(), "left")
+	rightPaddle := newPaddle("right")
+	leftPaddle := newPaddle("left")
 	ball := newBall()
 
 	gameState := play

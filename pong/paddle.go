@@ -22,13 +22,13 @@ type paddle struct {
 	side  string
 }
 
-func newPaddle(center pixel.Vec, side string) *paddle {
+func newPaddle(side string) *paddle {
 
 	var pos pixel.Vec
 	if side == "left" {
-		pos = center.Sub(pixel.V(winWidth/2-20, 0))
+		pos = pixel.V(winWidth/2, winHeight/2).Sub(pixel.V(winWidth/2-20, 0))
 	} else if side == "right" {
-		pos = center.Add(pixel.V(winWidth/2-20, 0))
+		pos = pixel.V(winWidth/2, winHeight/2).Add(pixel.V(winWidth/2-20, 0))
 	}
 
 	paddle := &paddle{
